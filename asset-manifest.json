@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/your-repo-name/static/css/main.dace8c27.css",
+    "main.js": "/your-repo-name/static/js/main.80f04195.js",
+    "static/media/pngwing.com.png": "/your-repo-name/static/media/pngwing.com.d7bc68182983741aa752.png",
+    "index.html": "/your-repo-name/index.html",
+    "main.dace8c27.css.map": "/your-repo-name/static/css/main.dace8c27.css.map",
+    "main.80f04195.js.map": "/your-repo-name/static/js/main.80f04195.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dace8c27.css",
+    "static/js/main.80f04195.js"
+  ]
+}
