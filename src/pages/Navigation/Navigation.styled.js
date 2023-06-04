@@ -29,3 +29,30 @@ text-decoration: none;
 }
 
 `
+export const DivLogout = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const UserName = styled.p`
+  margin-right: 16px;
+  font-weight: bold;
+  color: white;
+`;
+
+export const ButtonLogout = styled.button`
+  padding: 8px 16px;
+  background: red;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  transition: background 0.3s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.6);
+  }
+`;

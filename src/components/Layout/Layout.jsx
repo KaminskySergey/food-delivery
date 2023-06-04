@@ -4,16 +4,19 @@ import Header from "../../pages/Header/Header"
 import { Outlet } from "react-router-dom"
 
 
+
 const Layout = ({children}) => {
+    
     return (
         <>
         <Header />
         
-        <main>
+        <main style={{position: 'relative'}}>
             <Suspense>
                 <Outlet fallback={null}></Outlet>
             </Suspense>
         </main>
+        
         </>
     )
 }

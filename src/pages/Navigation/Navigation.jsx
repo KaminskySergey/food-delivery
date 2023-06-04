@@ -1,15 +1,18 @@
-import { useSelector } from "react-redux";
-import { List, Link } from "./Navigation.styled";
-import { selectedIsLoadingUser } from "../../redux/auth/selectors";
+import { useDispatch, useSelector } from "react-redux";
+import { List, Link, DivLogout, UserName, ButtonLogout } from "./Navigation.styled";
+import { selectedIsLoadingUser, selectedUser } from "../../redux/auth/selectors";
+import { logout } from "../../redux/auth/operations";
 const getActiveLink = ({isActive}) => {
     return isActive ? 'active' : '';
     
 }
 
 const Navigation = () => {
-
+    const dispatch = useDispatch()
     const isLoading = useSelector(selectedIsLoadingUser)
-    console.log(isLoading, 'isLoadingisLoadingisLoading')
+    const nameUser = useSelector(selectedUser)
+    
+
     return (
         <>
         <List>
@@ -32,13 +35,19 @@ const Navigation = () => {
         </List>
         
 
+        {isLoading ? 
+        <DivLogout>
+            <UserName >Вітаю {nameUser.user.name}</UserName>
+            <ButtonLogout onClick={() => dispatch(logout())} type="button">Вийти</ButtonLogout>
+        </DivLogout> 
+        :
         <ul>
             <li>
                 <Link className={getActiveLink} to='/register'>
                 Auth
                 </Link>
             </li>
-        </ul>
+        </ul>}
         </>
     )
 }

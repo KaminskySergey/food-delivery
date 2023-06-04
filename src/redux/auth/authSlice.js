@@ -17,15 +17,14 @@ const authSlice = createSlice({
     .addCase(register.fulfilled, (state, {payload}) => {
       
         state.user = payload.data.user
-        // state.token = payload.token;
+        
         state.isLoadingUser = true;
     })
     .addCase(register.rejected, state => state)
     ///======================================================
     .addCase(login.pending, state => state)
     .addCase(login.fulfilled, (state, {payload}) => {
-// console.log(payload, 'eeeeeeeeeeee')
-        // state.user = payload.data.user
+
         state.token = payload.data.token;
         state.isLoadingUser = true;
     })
@@ -39,19 +38,22 @@ const authSlice = createSlice({
     ///======================================================
     .addCase(refresh.pending, (state, {payload}) => {
         state.isRefreshingUser = true;
+
     })
     .addCase(refresh.fulfilled, (state, {payload}) => {
-        console.log(payload, 'qqqqqqqqqqqqqqqqqqqqqqqq')
-        state.user = payload.data.user
+        state.user.name = payload.data.user.name
+        state.user.email = payload.data.user.email
         state.isRefreshingUser = false;
         state.isLoadingUser = true;
-        state.token = payload.data.token;
         
         
     })
-    .addCase(refresh.rejected, (state, { payload }) => 
-        {state.isRefreshingUser = false})
+    .addCase(refresh.rejected, (state, { payload }) => {
+        state.isRefreshingUser = false
+    })
+        ///=================================================
     }
+    
 })
 
 const persistConfig = {
