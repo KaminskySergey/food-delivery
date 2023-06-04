@@ -16,8 +16,8 @@
     "react-scripts": "5.0.1",
     "redux-persist": "^6.0.0",
     "styled-components": "^5.3.11",
-    "web-vitals": "^2.1.4",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.10"
   }
 }

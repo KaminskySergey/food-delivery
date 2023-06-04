@@ -1,5 +1,7 @@
 
+import { Suspense } from "react"
 import Header from "../../pages/Header/Header"
+import { Outlet } from "react-router-dom"
 
 
 const Layout = ({children}) => {
@@ -8,7 +10,9 @@ const Layout = ({children}) => {
         <Header />
         
         <main>
-            {children}
+            <Suspense>
+                <Outlet></Outlet>
+            </Suspense>
         </main>
         </>
     )
