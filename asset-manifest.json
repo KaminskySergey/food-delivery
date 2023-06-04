@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/your-repo-name/static/css/main.dace8c27.css",
-    "main.js": "/your-repo-name/static/js/main.80f04195.js",
-    "static/media/pngwing.com.png": "/your-repo-name/static/media/pngwing.com.d7bc68182983741aa752.png",
-    "index.html": "/your-repo-name/index.html",
-    "main.dace8c27.css.map": "/your-repo-name/static/css/main.dace8c27.css.map",
-    "main.80f04195.js.map": "/your-repo-name/static/js/main.80f04195.js.map"
+    "main.css": "/food-delivery/static/css/main.dace8c27.css",
+    "main.js": "/food-delivery/static/js/main.d5b237ba.js",
+    "static/media/pngwing.com.png": "/food-delivery/static/media/pngwing.com.d7bc68182983741aa752.png",
+    "index.html": "/food-delivery/index.html",
+    "main.dace8c27.css.map": "/food-delivery/static/css/main.dace8c27.css.map",
+    "main.d5b237ba.js.map": "/food-delivery/static/js/main.d5b237ba.js.map"
   },
   "entrypoints": [
     "static/css/main.dace8c27.css",
-    "static/js/main.80f04195.js"
+    "static/js/main.d5b237ba.js"
   ]
 }
