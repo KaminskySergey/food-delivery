@@ -20,7 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectedToken } from "./redux/auth/selectors";
 import { refresh } from "./redux/auth/operations";
 import History from "./pages/History/History";
-
+import Home from "./pages/Home/Home";
 
 const App = () => {
   const dispatch = useDispatch()
@@ -34,7 +34,8 @@ console.log(token)
   return (
     <>
       <Routes>
-          <Route path="/*" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<RestrictedRoute component={Home} redirectTo="/shop"/>} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/shop/:shopId" element={<Shop />} />
             <Route path="/shoping" element={<Shoping />} />
