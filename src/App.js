@@ -17,8 +17,8 @@ import LoginForm from "./pages/LoginForm/LoginForm";
 import { useDispatch, useSelector } from "react-redux";
 
 
-import { selectedToken } from "../src/redux/auth/selectors";
-import { refresh } from "../src/redux/auth/operations";
+import { selectedToken } from "./redux/auth/selectors";
+import { refresh } from "./redux/auth/operations";
 import Home from "./pages/Home/Home";
 import History from "./pages/History/History";
 
