@@ -11,7 +11,7 @@ const Layout = ({children}) => {
         
         <main>
             <Suspense>
-                <Outlet></Outlet>
+                <Outlet fallback={null}></Outlet>
             </Suspense>
         </main>
         </>
