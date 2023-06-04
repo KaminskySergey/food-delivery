@@ -35,7 +35,7 @@ console.log(token)
   return (
     <>
       <Layout>
-        <Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
 
         <Routes>
         <Route path='/' element={<RestrictedRoute component={Home} redirectTo="/shop"/>} />
