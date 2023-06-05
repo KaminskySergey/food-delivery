@@ -21,3 +21,5 @@ try {
     return thunkAPI.rejectWithValue('помилка в операціях')
 }
 })
+
+

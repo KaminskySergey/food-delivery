@@ -27,8 +27,8 @@ const Navigation = () => {
                 </Link>
             </li>
             {isLoading && <li className="nav-link">
-                <Link className={getActiveLink} to="/shoping" >
-                    Orders
+                <Link className={getActiveLink} to="/history" >
+                    History
                 </Link>
             </li>}
             

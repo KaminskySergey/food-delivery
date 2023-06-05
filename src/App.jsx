@@ -33,7 +33,7 @@ const SpinnerContainer = styled.div`
 const App = () => {
   const dispatch = useDispatch()
   const token = useSelector(selectedToken)
-console.log(token)
+
   const isefresh = useSelector(selectedIsRefreshUser)
   useEffect(() => {
     if (token) {
@@ -48,7 +48,7 @@ console.log(token)
             <Route path="/shop" element={<Shop />} />
             <Route path="/shop/:shopId" element={<Shop />} />
             <Route path="/shoping" element={<Shoping />} />
-            <Route path="/orders" element={<PrivateRoute component={History} redirectTo={'/shop'} />} />
+            <Route path="/history" element={<PrivateRoute component={History} redirectTo={'/shop'} />} />
             <Route path="/login" element={<RestrictedRoute component={LoginForm} redirectTo={'/shop'} />} />
             <Route path="/register" element={<RestrictedRoute component={RegisterForm} redirectTo={'/shop'} />} />
         </Route>

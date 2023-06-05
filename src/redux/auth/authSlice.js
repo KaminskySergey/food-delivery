@@ -3,7 +3,7 @@ import { persistReducer } from 'redux-persist'
 
 import { createSlice } from "@reduxjs/toolkit";
 import storage from 'redux-persist/lib/storage'
-import { login, logout, refresh, register } from './operations';
+import { getOrdersHistory, login, logout, refresh, register } from './operations';
 import { initAuth } from './initAuth';
 
 
@@ -52,6 +52,14 @@ const authSlice = createSlice({
         state.isRefreshingUser = false
     })
         ///=================================================
+
+    .addCase(getOrdersHistory.pending, state => state)
+    .addCase(getOrdersHistory.fulfilled, (state, {payload}) => {
+
+        state.user.ordersHistory = payload.data.user.ordersUser
+        
+
+    })
     }
     
 })
