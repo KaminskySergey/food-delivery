@@ -25,7 +25,7 @@ const ShopCard = () => {
         
     }, [dispatch])
     return (
-        <Box style={{borderRadius:'16px', padding: '16px 32px 0 32px', overflowY: 'scroll'}} height='100%' width='80%' >
+        <Box style={{borderRadius:'16px', padding: '16px 32px 0 32px'}} height='100%' width='80%' >
         
         <ShopCardList items={filteredObjects}>
             <ShopItem />

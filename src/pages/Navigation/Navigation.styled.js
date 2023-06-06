@@ -21,14 +21,44 @@ text-decoration: none;
   background-size: 200% auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, .1);
   transition: .5s;
-  &:hover {
+  &:hover, &:focus {
   background-position: right center;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, red 100%);
 }
-&:active {
-    background-image: linear-gradient(to right, #000 0%, #656565 51%, #677 100%);
-}
+&:active,
+  &.active { /* Добавлено .active для активной ссылки */
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, red 100%) !important;
+    transform: scale(1.2);
+  }
 
 `
+
+export const LinkAuth = styled(NavLink)`
+text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, rgb(66 255 3) 0%, rgb(213 255 0) 51%, #020bf9 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+  &:hover, &:focus {
+  background-position: right center;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, red 100%);
+}
+&:active,
+  &.active { /* Добавлено .active для активной ссылки */
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, red 100%) !important;
+    transform: scale(1.2);
+  }
+
+`
+
 export const DivLogout = styled.div`
   display: flex;
   align-items: center;

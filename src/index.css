@@ -82,6 +82,3 @@ img{
   height: auto;
 }
 
-.active {
-  background-image: linear-gradient(to right, #000 0%, #656565 51%, #677 100%);
-}

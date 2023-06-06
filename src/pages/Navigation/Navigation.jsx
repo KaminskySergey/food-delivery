@@ -1,11 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { List, Link, DivLogout, UserName, ButtonLogout } from "./Navigation.styled";
+import { List, Link, DivLogout, UserName, ButtonLogout, LinkAuth } from "./Navigation.styled";
 import { selectedIsLoadingUser, selectedUser } from "../../redux/auth/selectors";
 import { logout } from "../../redux/auth/operations";
-const getActiveLink = ({isActive}) => {
-    return isActive ? 'active' : '';
-    
-}
+
 
 const Navigation = () => {
     const dispatch = useDispatch()
@@ -17,17 +14,17 @@ const Navigation = () => {
         <>
         <List>
             <li className="nav-link">
-                <Link className={getActiveLink} to="/shop" >
+                <Link  to="/shop" >
                     Shop
                 </Link>
             </li>
             <li className="nav-link">
-                <Link className={getActiveLink} to="/shoping" >
+                <Link  to="/shoping" >
                     Shopping Cart
                 </Link>
             </li>
             {isLoading && <li className="nav-link">
-                <Link className={getActiveLink} to="/history" >
+                <Link to="/history" >
                     History
                 </Link>
             </li>}
@@ -43,9 +40,9 @@ const Navigation = () => {
         :
         <ul>
             <li>
-                <Link className={getActiveLink} to='/register'>
+                <LinkAuth to='/register'>
                 Auth
-                </Link>
+                </LinkAuth>
             </li>
         </ul>}
         </>

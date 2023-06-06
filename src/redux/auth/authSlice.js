@@ -17,7 +17,7 @@ const authSlice = createSlice({
     .addCase(register.fulfilled, (state, {payload}) => {
       
         state.user = payload.data.user
-        
+        state.isLoadingForm = true;
         state.isLoadingUser = true;
     })
     .addCase(register.rejected, state => state)
@@ -27,6 +27,7 @@ const authSlice = createSlice({
 
         state.token = payload.data.token;
         state.isLoadingUser = true;
+        state.isLoadingForm = true;
     })
     
     ///======================================================
@@ -34,6 +35,7 @@ const authSlice = createSlice({
         state.user = {name: null, email: null}
         state.token = null;
         state.isLoadingUser = false;
+        state.isLoadingForm = false;
     })
     ///======================================================
     .addCase(refresh.pending, (state, {payload}) => {
@@ -45,6 +47,7 @@ const authSlice = createSlice({
         state.user.email = payload.data.user.email
         state.isRefreshingUser = false;
         state.isLoadingUser = true;
+        state.isLoadingForm = true;
         
         
     })

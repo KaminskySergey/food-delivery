@@ -5,7 +5,7 @@ import ShopingCardList from "./ShopingCardList/ShopingCardList"
 const ShopingCard = () => {
     return (
         <>
-        <Box width='50%' height='100%' ml={16} style={{outline: '1px solid yellow', borderRadius:'16px', padding: '8px 8px 0 8px', overflowY: 'scroll'}}>
+        <Box width='50%' height='100%' ml={16} style={{outline: '1px solid yellow', borderRadius:'16px', padding: '8px 8px 0 8px'}}>
             <ShopingCardList>
                 <ShopingCardItem  />
             </ShopingCardList>
