@@ -55,7 +55,7 @@ const HistoryItem = () => {
       };
     return (
         <>
-        {historyOrders.map((order) => (
+        {historyOrders?.map((order) => (
           <Item key={order._id}>
             <div style={{width: '50px', display: 'flex', alignItems: 'center', marginRight: '8px'}}>
                 {renderShopAvatar(order.shop)}
