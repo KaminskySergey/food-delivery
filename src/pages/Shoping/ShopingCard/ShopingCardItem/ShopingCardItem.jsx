@@ -12,7 +12,9 @@ const ShopingCardItem = () => {
     const card = useSelector(selectIsCart)
     const dispatch = useDispatch()
     const handleUpdateQuantity = (id, value) => {
-        dispatch(updateQuantity({id, value}))
+        if(value >= 0){
+          dispatch(updateQuantity({id, value}))
+        }
     }
     
     const handleClickDelete = (id) => {
